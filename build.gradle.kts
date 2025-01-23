@@ -5,14 +5,14 @@ plugins {
 }
 
 group = "com.hivemq.extensions"
-description = "HiveMQ 4 Hello World Extension - a simple reference for all extension developers"
+description = "HiveMQ 4 Block Extension - block certain Client ID from connecting"
 
 hivemqExtension {
-    name = "Hello World Extension"
+    name = "Block Extension"
     author = "HiveMQ"
-    priority = 1000
-    startPriority = 1000
-    mainClass = "$group.helloworld.HelloWorldMain"
+    priority = 1100 // set the highest extension priority
+    startPriority = 1100 // set the highest start priority
+    mainClass = "$group.block.BlockExtensionMain"
     sdkVersion = "$version"
 
     resources {
