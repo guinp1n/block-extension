@@ -57,7 +57,7 @@ public class BlockExtensionMain implements ExtensionMain {
                     ConnectPacket connect = simpleAuthInput.getConnectPacket();
                     String clientId = connect.getClientId();
 
-                    // Check if the client set username and password
+                    // Check if the client starts with python
                     if (clientId.startsWith("python")) {
                         simpleAuthOutput.failAuthentication();
                         return;
